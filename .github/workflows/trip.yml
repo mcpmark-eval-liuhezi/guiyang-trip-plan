@@ -1,0 +1,27 @@
+name: Trip Checklist
+
+on:
+  workflow_dispatch:
+    inputs:
+      trip_date:
+        description: 'Trip date (yyyy-mm-dd)'
+        required: true
+        default: '2026-10-30'
+      recommended_train:
+        description: 'Recommended train number'
+        required: true
+        default: 'G307'
+
+jobs:
+  checklist:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo trip checklist
+        run: |
+          echo "Trip checklist"
+          echo "=============="
+          echo "[ ] Trip date: ${{ inputs.trip_date }}"
+          echo "[ ] Recommended train: ${{ inputs.recommended_train }}"
+          echo "[ ] Ticket booked"
+          echo "[ ] Reading list synced"
+          echo "[ ] Seminar slides packed"
