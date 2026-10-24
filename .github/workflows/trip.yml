@@ -10,7 +10,7 @@ on:
       recommended_train:
         description: 'Recommended train number'
         required: true
-        default: 'G307'
+        default: 'G381 + G241'
 
 jobs:
   checklist:
